@@ -3,6 +3,7 @@ package sen.think.in.mybatis.type.handlers;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
+import org.apache.ibatis.type.MappedJdbcTypes;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
@@ -12,6 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@MappedJdbcTypes(JdbcType.VARCHAR)
 public class BizScopeTypeHandler extends BaseTypeHandler<List<Integer>> {
     private static final String SEPARATOR = ",";
 
